@@ -31,15 +31,19 @@ void LoadImages(const string &strImagePath, const string &strPathTimes,
                 vector<string> &vstrImages, vector<double> &vTimeStamps);
 
 int main(int argc, char **argv)
-{  
+{
+    // checks to see if correct number of arguments was collected  
     if(argc < 5)
     {
         cerr << endl << "Usage: ./mono_euroc path_to_vocabulary path_to_settings path_to_sequence_folder_1 path_to_times_file_1 (path_to_image_folder_2 path_to_times_file_2 ... path_to_image_folder_N path_to_times_file_N) (trajectory_file_name)" << endl;
         return 1;
     }
-
+    // calculates the number of sequences (aka datsets) that you intend to process
+    // i.e. if 5 arguments, then (5-3)/2 = 1 so only processing 1 dataset
     const int num_seq = (argc-3)/2;
     cout << "num_seq = " << num_seq << endl;
+    
+    // extracts the optional trajectory file name and prints outfile name if so
     bool bFileName= (((argc-3) % 2) == 1);
     string file_name;
     if (bFileName)
@@ -50,6 +54,7 @@ int main(int argc, char **argv)
 
     // Load all sequences:
     int seq;
+    // vectors are organized to match the number of datasets/sequences to process (num_seq)
     vector< vector<string> > vstrImageFilenames;
     vector< vector<double> > vTimestampsCam;
     vector<int> nImages;
@@ -62,7 +67,10 @@ int main(int argc, char **argv)
     for (seq = 0; seq<num_seq; seq++)
     {
         cout << "Loading images for sequence " << seq << "...";
-        LoadImages(string(argv[(2*seq)+3]) + "/mav0/cam0/data", string(argv[(2*seq)+4]), vstrImageFilenames[seq], vTimestampsCam[seq]);
+        
+        // this is the folder for the colon images -> use this for argument 3 
+        // /mnt/hgfs/Documents/LowCam/Colon-IV/TumorfreeTrajectory_1/Frames
+        LoadImages(string(argv[(2*seq)+3]), string(argv[(2*seq)+4]), vstrImageFilenames[seq], vTimestampsCam[seq]);
         cout << "LOADED!" << endl;
 
         nImages[seq] = vstrImageFilenames[seq].size();
