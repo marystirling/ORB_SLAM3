@@ -2,18 +2,18 @@
 
 # Camera Parameters
 File.version: "1.0"
-Camera.type: "endoscope"
+Camera.type: "PinHole"
 
 # Camera calibration and distortion parameters
-Camera.fx: 816.8598
-Camera.fy: 814.8223
-Camera.cx: 308.2864
-Camera.cy: 158.3971
+Camera1.fx: 816.8598
+Camera1.fy: 814.8223
+Camera1.cx: 308.2864
+Camera1.cy: 158.3971
 
-Camera.k1: 0.2345
-Camera.k2: -0.7908
-Camera.p1: 0.0
-Camera.p2: 0.0
+Camera1.k1: 0.2345
+Camera1.k2: -0.7908
+Camera1.p1: 0.0
+Camera1.p2: 0.0
 
 Camera.width: 640
 Camera.height: 480
