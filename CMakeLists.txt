@@ -187,6 +187,13 @@ if(realsense2_FOUND)
     target_link_libraries(stereo_realsense_D435i ${PROJECT_NAME})
 endif()
 
+# adding mono_endo example
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/EndoSLAM)
+
+add_executable(mono_endo
+	EndoSLAM/mono_endo.cc)
+target_link_libraries(mono_endo ${PROJECT_NAME})
+
 #Monocular examples
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples/Monocular)
 
@@ -201,6 +208,8 @@ target_link_libraries(mono_kitti ${PROJECT_NAME})
 add_executable(mono_euroc
         Examples/Monocular/mono_euroc.cc)
 target_link_libraries(mono_euroc ${PROJECT_NAME})
+
+
 
 add_executable(mono_tum_vi
         Examples/Monocular/mono_tum_vi.cc)
