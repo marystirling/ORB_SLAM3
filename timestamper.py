@@ -9,7 +9,7 @@ def main():
     directory = sys.argv[1]
     ts_path = sys.argv[2]
 
-    image_list = [file[:-4] for file in os.listdir(directory) if file.endswith(".png")]
+    image_list = [file[:-4] for file in os.listdir(directory) if file.endswith(".png") or file.endswith(".jpg")]
     image_list.sort()
     ts_full_path = os.path.join(ts_path, "timestamp.txt")
     
