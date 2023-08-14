@@ -191,8 +191,295 @@ endif()
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/EndoSLAM)
 
 add_executable(mono_endo
-	EndoSLAM/mono_endo.cc)
+	EndoSLAM/LowCam/Colon-IV/mono_endo.cc)
+add_executable(small_intestine_high
+	EndoSLAM/HighCam/SmallIntestine/small_intestine_high.cc)
+add_executable(unity_endo
+	EndoSLAM/unity.cc)
 target_link_libraries(mono_endo ${PROJECT_NAME})
+target_link_libraries(small_intestine_high ${PROJECT_NAME})
+target_link_libraries(unity_endo ${PROJECT_NAME})
+
+
+# adding endoslam datasets 
+# endoslam Cameras/HighCam 
+# colon
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/HighCam/Colon4/Traj1)
+add_executable(hc_colon_t1
+	endoslam/Cameras/HighCam/Colon4/Traj1/hc_colon4_t1.cc)
+target_link_libraries(hc_colon_t1 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/HighCam/Colon4/Traj2)
+add_executable(hc_colon_t2
+	endoslam/Cameras/HighCam/Colon4/Traj2/hc_colon4_t2.cc)
+target_link_libraries(hc_colon_t2 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/HighCam/Colon4/Traj3)
+add_executable(hc_colon_t3
+	endoslam/Cameras/HighCam/Colon4/Traj3/hc_colon4_t3.cc)
+target_link_libraries(hc_colon_t3 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/HighCam/Colon4/Traj4)
+add_executable(hc_colon_t4
+	endoslam/Cameras/HighCam/Colon4/Traj4/hc_colon4_t4.cc)
+target_link_libraries(hc_colon_t4 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/HighCam/Colon4/Traj5)
+add_executable(hc_colon_t5
+	endoslam/Cameras/HighCam/Colon4/Traj5/hc_colon4_t5.cc)
+target_link_libraries(hc_colon_t5 ${PROJECT_NAME})
+
+# small intestine
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/HighCam/SmallIntestine/Traj1)
+add_executable(hc_si_t1
+	endoslam/Cameras/HighCam/SmallIntestine/Traj1/hc_si_t1.cc)
+target_link_libraries(hc_si_t1 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/HighCam/SmallIntestine/Traj2)
+add_executable(hc_si_t2
+	endoslam/Cameras/HighCam/SmallIntestine/Traj2/hc_si_t2.cc)
+target_link_libraries(hc_si_t2 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/HighCam/SmallIntestine/Traj3)
+add_executable(hc_si_t3
+	endoslam/Cameras/HighCam/SmallIntestine/Traj3/hc_si_t3.cc)
+target_link_libraries(hc_si_t3 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/HighCam/SmallIntestine/Traj4)
+add_executable(hc_si_t4
+	endoslam/Cameras/HighCam/SmallIntestine/Traj4/hc_si_t4.cc)
+target_link_libraries(hc_si_t4 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/HighCam/SmallIntestine/Traj5)
+add_executable(hc_si_t5
+	endoslam/Cameras/HighCam/SmallIntestine/Traj5/hc_si_t5.cc)
+target_link_libraries(hc_si_t5 ${PROJECT_NAME})
+
+# stomach1
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/HighCam/Stomach1/Traj1)
+add_executable(hc_stom1_t1
+	endoslam/Cameras/HighCam/Stomach1/Traj1/hc_stom1_t1.cc)
+target_link_libraries(hc_stom1_t1 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/HighCam/Stomach1/Traj2)
+add_executable(hc_stom1_t2
+	endoslam/Cameras/HighCam/Stomach1/Traj2/hc_stom1_t2.cc)
+target_link_libraries(hc_stom1_t2 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/HighCam/Stomach1/Traj3)
+add_executable(hc_stom1_t3
+	endoslam/Cameras/HighCam/Stomach1/Traj3/hc_stom1_t3.cc)
+target_link_libraries(hc_stom1_t3 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/HighCam/Stomach1/Traj4)
+add_executable(hc_stom1_t4
+	endoslam/Cameras/HighCam/Stomach1/Traj4/hc_stom1_t4.cc)
+target_link_libraries(hc_stom1_t4 ${PROJECT_NAME})
+
+# stomach2
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/HighCam/Stomach2/Traj1)
+add_executable(hc_stom2_t1
+	endoslam/Cameras/HighCam/Stomach2/Traj1/hc_stom2_t1.cc)
+target_link_libraries(hc_stom2_t1 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/HighCam/Stomach2/Traj2)
+add_executable(hc_stom2_t2
+	endoslam/Cameras/HighCam/Stomach2/Traj2/hc_stom2_t2.cc)
+target_link_libraries(hc_stom2_t2 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/HighCam/Stomach2/Traj3)
+add_executable(hc_stom2_t3
+	endoslam/Cameras/HighCam/Stomach2/Traj3/hc_stom2_t3.cc)
+target_link_libraries(hc_stom2_t3 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/HighCam/Stomach2/Traj4)
+add_executable(hc_stom2_t4
+	endoslam/Cameras/HighCam/Stomach2/Traj4/hc_stom2_t4.cc)
+target_link_libraries(hc_stom2_t4 ${PROJECT_NAME})
+
+# stomach3
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/HighCam/Stomach3/Traj1)
+add_executable(hc_stom3_t1
+	endoslam/Cameras/HighCam/Stomach3/Traj1/hc_stom3_t1.cc)
+target_link_libraries(hc_stom3_t1 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/HighCam/Stomach3/Traj2)
+add_executable(hc_stom3_t2
+	endoslam/Cameras/HighCam/Stomach3/Traj2/hc_stom3_t2.cc)
+target_link_libraries(hc_stom3_t2 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/HighCam/Stomach3/Traj3)
+add_executable(hc_stom3_t3
+	endoslam/Cameras/HighCam/Stomach3/Traj3/hc_stom3_t3.cc)
+target_link_libraries(hc_stom3_t3 ${PROJECT_NAME})
+
+
+# endoslam Cameras/LowCam 
+# colon
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/LowCam/Colon4/Traj1)
+add_executable(lc_colon_t1
+	endoslam/Cameras/LowCam/Colon4/Traj1/lc_colon4_t1.cc)
+target_link_libraries(lc_colon_t1 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/LowCam/Colon4/Traj2)
+add_executable(lc_colon_t2
+	endoslam/Cameras/LowCam/Colon4/Traj2/lc_colon4_t2.cc)
+target_link_libraries(lc_colon_t2 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/LowCam/Colon4/Traj3)
+add_executable(lc_colon_t3
+	endoslam/Cameras/LowCam/Colon4/Traj3/lc_colon4_t3.cc)
+target_link_libraries(lc_colon_t3 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/LowCam/Colon4/Traj4)
+add_executable(lc_colon_t4
+	endoslam/Cameras/LowCam/Colon4/Traj4/lc_colon4_t4.cc)
+target_link_libraries(lc_colon_t4 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/LowCam/Colon4/Traj5)
+add_executable(lc_colon_t5
+	endoslam/Cameras/LowCam/Colon4/Traj5/lc_colon4_t5.cc)
+target_link_libraries(lc_colon_t5 ${PROJECT_NAME})
+
+# small intestine
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/LowCam/SmallIntestine/Traj1)
+add_executable(lc_si_t1
+	endoslam/Cameras/LowCam/SmallIntestine/Traj1/lc_si_t1.cc)
+target_link_libraries(lc_si_t1 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/LowCam/SmallIntestine/Traj2)
+add_executable(lc_si_t2
+	endoslam/Cameras/LowCam/SmallIntestine/Traj2/lc_si_t2.cc)
+target_link_libraries(lc_si_t2 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/LowCam/SmallIntestine/Traj3)
+add_executable(lc_si_t3
+	endoslam/Cameras/LowCam/SmallIntestine/Traj3/lc_si_t3.cc)
+target_link_libraries(lc_si_t3 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/LowCam/SmallIntestine/Traj4)
+add_executable(lc_si_t4
+	endoslam/Cameras/LowCam/SmallIntestine/Traj4/lc_si_t4.cc)
+target_link_libraries(lc_si_t4 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/LowCam/SmallIntestine/Traj5)
+add_executable(lc_si_t5
+	endoslam/Cameras/LowCam/SmallIntestine/Traj5/lc_si_t5.cc)
+target_link_libraries(lc_si_t5 ${PROJECT_NAME})
+
+# stomach1
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/LowCam/Stomach1/Traj1)
+add_executable(lc_stom1_t1
+	endoslam/Cameras/LowCam/Stomach1/Traj1/lc_stom1_t1.cc)
+target_link_libraries(lc_stom1_t1 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/LowCam/Stomach1/Traj2)
+add_executable(lc_stom1_t2
+	endoslam/Cameras/LowCam/Stomach1/Traj2/lc_stom1_t2.cc)
+target_link_libraries(lc_stom1_t2 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/LowCam/Stomach1/Traj3)
+add_executable(lc_stom1_t3
+	endoslam/Cameras/LowCam/Stomach1/Traj3/lc_stom1_t3.cc)
+target_link_libraries(lc_stom1_t3 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/LowCam/Stomach1/Traj4)
+add_executable(lc_stom1_t4
+	endoslam/Cameras/LowCam/Stomach1/Traj4/lc_stom1_t4.cc)
+target_link_libraries(lc_stom1_t4 ${PROJECT_NAME})
+
+# stomach2
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/LowCam/Stomach2/Traj1)
+add_executable(lc_stom2_t1
+	endoslam/Cameras/LowCam/Stomach2/Traj1/lc_stom2_t1.cc)
+target_link_libraries(lc_stom2_t1 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/LowCam/Stomach2/Traj2)
+add_executable(lc_stom2_t2
+	endoslam/Cameras/LowCam/Stomach2/Traj2/lc_stom2_t2.cc)
+target_link_libraries(lc_stom2_t2 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/LowCam/Stomach2/Traj3)
+add_executable(lc_stom2_t3
+	endoslam/Cameras/LowCam/Stomach2/Traj3/lc_stom2_t3.cc)
+target_link_libraries(lc_stom2_t3 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/LowCam/Stomach2/Traj4)
+add_executable(lc_stom2_t4
+	endoslam/Cameras/LowCam/Stomach2/Traj4/lc_stom2_t4.cc)
+target_link_libraries(lc_stom2_t4 ${PROJECT_NAME})
+
+# stomach3
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/LowCam/Stomach3/Traj1)
+add_executable(lc_stom3_t1
+	endoslam/Cameras/LowCam/Stomach3/Traj1/lc_stom3_t1.cc)
+target_link_libraries(lc_stom3_t1 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/LowCam/Stomach3/Traj2)
+add_executable(lc_stom3_t2
+	endoslam/Cameras/LowCam/Stomach3/Traj2/lc_stom3_t2.cc)
+target_link_libraries(lc_stom3_t2 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/LowCam/Stomach3/Traj3)
+add_executable(lc_stom3_t3
+	endoslam/Cameras/LowCam/Stomach3/Traj3/lc_stom3_t3.cc)
+target_link_libraries(lc_stom3_t3 ${PROJECT_NAME})
+
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/LowCam/Stomach3/Traj4)
+add_executable(lc_stom3_t4
+	endoslam/Cameras/LowCam/Stomach3/Traj4/lc_stom3_t4.cc)
+target_link_libraries(lc_stom3_t4 ${PROJECT_NAME})
+
+# Cameras/MiroCam/Colon3
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/MiroCam/Colon3/Traj1)
+add_executable(mc_colon3_t1
+	endoslam/Cameras/MiroCam/Colon3/Traj1/mc_colon3_t1.cc)
+target_link_libraries(mc_colon3_t1 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/MiroCam/Colon3/Traj3)
+add_executable(mc_colon3_t3
+	endoslam/Cameras/MiroCam/Colon3/Traj3/mc_colon3_t3.cc)
+target_link_libraries(mc_colon3_t3 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/MiroCam/Colon3/Traj4)
+add_executable(mc_colon3_t4
+	endoslam/Cameras/MiroCam/Colon3/Traj4/mc_colon3_t4.cc)
+target_link_libraries(mc_colon3_t4 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/MiroCam/Colon3/Traj5)
+add_executable(mc_colon3_t5
+	endoslam/Cameras/MiroCam/Colon3/Traj5/mc_colon3_t5.cc)
+target_link_libraries(mc_colon3_t5 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/MiroCam/Colon3/Traj6)
+add_executable(mc_colon3_t6
+	endoslam/Cameras/MiroCam/Colon3/Traj6/mc_colon3_t6.cc)
+target_link_libraries(mc_colon3_t6 ${PROJECT_NAME})
+
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/MiroCam/Colon3/Traj7)
+add_executable(mc_colon3_t7
+	endoslam/Cameras/MiroCam/Colon3/Traj7/mc_colon3_t7.cc)
+target_link_libraries(mc_colon3_t7 ${PROJECT_NAME})
+
+# UnityCam
+# Colon
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/UnityCam/Colon)
+add_executable(uc_colon
+	endoslam/UnityCam/Colon/uc_colon.cc)
+target_link_libraries(uc_colon ${PROJECT_NAME})
+
+# Small intestine
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/UnityCam/SmallIntestine)
+add_executable(uc_si
+	endoslam/UnityCam/SmallIntestine/uc_si.cc)
+target_link_libraries(uc_si ${PROJECT_NAME})
+
+# stomach
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/UnityCam/Stomach)
+add_executable(uc_stom
+	endoslam/UnityCam/Stomach/uc_stom.cc)
+target_link_libraries(uc_stom ${PROJECT_NAME})
 
 #Monocular examples
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/Examples/Monocular)
