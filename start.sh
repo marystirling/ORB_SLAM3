@@ -14,6 +14,10 @@ case "$user_input" in
 		echo "Executing HighCam colon trajectory 1"
 		./endoslam/Cameras/HighCam/Colon4/Traj1/hc_colon_t1 ./Vocabulary/ORBvoc.txt ./endoslam/Cameras/HighCam/highcam.yaml ../../../mnt/hgfs/Documents/endoslam/Cameras/HighCam/Colon-IV/TumorfreeTrajectory_1/Frames ./endoslam/Cameras/HighCam/Colon4/Traj1/timestamp.txt hc_colon_t1
 		;;
+	"hc_colon_split_t1")
+		echo "Executing HighCam colon trajectory 1 with split"
+		./endoslam/Cameras/HighCam/Colon4/Split_Traj1/hc_colon_split_t1 ./Vocabulary/ORBvoc.txt ./endoslam/Cameras/HighCam/highcam.yaml ../../../mnt/hgfs/Documents/endoslam/Cameras/HighCam/Colon-IV/Split_t1/Frames ./endoslam/Cameras/HighCam/Colon4/Split_Traj1/timestamp.txt hc_colon_split_t1
+		;;
 	"hc_colon_t2")
 		echo "Executing HighCam colon trajectory 2"
 		./endoslam/Cameras/HighCam/Colon4/Traj2/hc_colon_t2 ./Vocabulary/ORBvoc.txt ./endoslam/Cameras/HighCam/highcam.yaml ../../../mnt/hgfs/Documents/endoslam/Cameras/HighCam/Colon-IV/TumorfreeTrajectory_2/Frames ./endoslam/Cameras/HighCam/Colon4/Traj2/timestamp.txt hc_colon_t2
@@ -221,11 +225,12 @@ case "$user_input" in
 		echo "Executing UnityCam small intestine"
 		./endoslam/UnityCam/SmallIntestine/uc_si ./Vocabulary/ORBvoc.txt ./endoslam/UnityCam/unitycam.yaml ../../../mnt/hgfs/Documents/endoslam/UnityCam/Small\ Intestine/Frames ./endoslam/UnityCam/SmallIntestine/timestamp.txt uc_si
 		;;
-	*)
+	
 	"uc_stom")
 		echo "Executing UnityCam stomach"
 		./endoslam/UnityCam/Stomach/uc_stom ./Vocabulary/ORBvoc.txt ./endoslam/UnityCam/unitycam.yaml ../../../mnt/hgfs/Documents/endoslam/UnityCam/Stomach/Frames ./endoslam/UnityCam/Stomach/timestamp.txt uc_stom
 		;;
+	*)
 		echo "Unknown command"
 		;;
 esac

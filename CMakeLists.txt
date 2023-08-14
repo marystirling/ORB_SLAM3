@@ -209,6 +209,11 @@ add_executable(hc_colon_t1
 	endoslam/Cameras/HighCam/Colon4/Traj1/hc_colon4_t1.cc)
 target_link_libraries(hc_colon_t1 ${PROJECT_NAME})
 
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/HighCam/Colon4/Split_Traj1)
+add_executable(hc_colon_split_t1
+	endoslam/Cameras/HighCam/Colon4/Split_Traj1/hc_colon4_split_t1.cc)
+target_link_libraries(hc_colon_split_t1 ${PROJECT_NAME})
+
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/endoslam/Cameras/HighCam/Colon4/Traj2)
 add_executable(hc_colon_t2
 	endoslam/Cameras/HighCam/Colon4/Traj2/hc_colon4_t2.cc)

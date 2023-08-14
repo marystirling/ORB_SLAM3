@@ -11,7 +11,7 @@ Camera1.cx: 178.5604
 Camera1.cy: 181.8043
 
 Camera1.k1: 0.0
-Camera1.k2: 0.0
+Camera1.k2: 1.0
 Camera1.p1: 0.0
 Camera1.p2: 0.0
 
