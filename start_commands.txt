@@ -1,0 +1,76 @@
+Arguments for start.sh for endoslam:
+
+HighCam:
+	 - Colon:
+	 	hc_colon_t1
+	 	hc_colon_t2
+	 	hc_colon_t3
+	 	hc_colon_t4
+	 	hc_colon_t5
+	 - Small Intestione:
+	 	hc_si_t1
+	 	hc_si_t2
+	 	hc_si_t3
+	 	hc_si_t4
+	 	hc_si_t5
+	 - Stomach I
+	 	hc_stom1_t1
+	 	hc_stom1_t2
+	 	hc_stom1_t3
+	 	hc_stom1_t4
+	 - Stomach II
+	 	hc_stom2_t1
+	 	hc_stom2_t2
+	 	hc_stom2_t3
+	 	hc_stom2_t4
+	 - Stomach III
+	 	hc_stom3_t1
+	 	hc_stom3_t2
+	 	hc_stom3_t3
+	 	hc_stom3_t4
+
+LowCam:
+	- Colon:
+	 	lc_colon_t1
+	 	lc_colon_t2
+	 	lc_colon_t3
+	 	lc_colon_t4
+	 	lc_colon_t5
+	 - Small Intestione:
+	 	lc_si_t1
+	 	lc_si_t2
+	 	lc_si_t3
+	 	lc_si_t4
+	 	lc_si_t5
+	 - Stomach I
+	 	lc_stom1_t1
+	 	lc_stom1_t2
+	 	lc_stom1_t3
+	 	lc_stom1_t4
+	 - Stomach II
+	 	lc_stom2_t1
+	 	lc_stom2_t2
+	 	lc_stom2_t3
+	 	lc_stom2_t4
+	 - Stomach III
+	 	lc_stom3_t1
+	 	lc_stom3_t2
+	 	lc_stom3_t3
+	 	lc_stom3_t4
+
+MiroCam:
+	- Colon:
+		mc_colon_t1
+		mc_colon_t3
+		mc_colon_t4
+		mc_colon_t5
+		mc_colon_t6
+		mc_colon_t7
+
+UnityCam:
+	- Colon:
+		uc_colon
+	- Small Intestine
+		uc_si
+	- Stomach
+		uc_stom
